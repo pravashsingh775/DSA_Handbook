@@ -1,34 +1,47 @@
 #include <iostream>
+#include <climits>
 using namespace std;
-int main()
-{
-    int arr[] = {10, 20, 30, 40, 50};
-    cout << arr[0] << endl;
-    cout << arr[1] << endl;
-    cout << arr[2] << endl;
-    cout << arr[3] << endl;
-    cout << arr[4] << endl;
 
-    // Max and min value in an array
-    int max = arr[0];
-    int min = arr[0];
-    for (int i = 1; i < 5; i++)
-    {
-        if (arr[i] > max)
-            max = arr[i];
-        if (arr[i] < min)
-            min = arr[i];
+// Problem: Array operations - Traversal, Finding Maximum, Minimum, and Second Largest element
+int main() {
+    int arr[] = {10, 45, 23, 89, 50};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "Array Elements: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
     }
-    cout << "Max value: " << max << endl;
-    cout << "Min value: " << min << endl;
+    cout << endl;
 
-    // second largest element
+    // 1. Finding Maximum and Minimum elements
+    int maxVal = arr[0];
+    int minVal = arr[0];
 
-    int secondLargest = arr[0];
-    for (int i = 1; i < 5; i++)
-    {
-        if (arr[i] > secondLargest && arr[i] < max)
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > maxVal) {
+            maxVal = arr[i];
+        }
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }
+
+    cout << "Maximum element: " << maxVal << endl;
+    cout << "Minimum element: " << minVal << endl;
+
+    // 2. Finding Second Largest element
+    int secondLargest = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] > secondLargest && arr[i] < maxVal) {
             secondLargest = arr[i];
+        }
     }
-    cout << "Second largest value: " << secondLargest << endl;
+
+    if (secondLargest != INT_MIN) {
+        cout << "Second Largest element: " << secondLargest << endl;
+    } else {
+        cout << "No second largest element exists." << endl;
+    }
+
+    return 0;
 }

@@ -1,34 +1,39 @@
-// check duplicate value in array
-
-# include <iostream>
+#include <iostream>
 using namespace std;
-int main()
-{
+
+// Problem: Given an integer array, return true if any value appears at least twice in the array.
+// Example: [1, 2, 3, 1] -> Duplicate found
+int main() {
     int n;
     cout << "Enter the number of elements in the array: ";
     cin >> n;
+
     int arr[n];
-    
-    for (int i = 0; i < n; i++)
-    {
+    cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-    bool isDuplicate = false;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                isDuplicate = true;
+
+    bool hasDuplicate = false;
+
+    // Check each pair of elements to find duplicates
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                hasDuplicate = true;
                 break;
             }
         }
-        if (isDuplicate)
+        if (hasDuplicate) {
             break;
+        }
     }
-    if (isDuplicate)
-        cout << "Duplicate value found" << endl;
-    else
-        cout << "No duplicate value found" << endl;
+
+    if (hasDuplicate) {
+        cout << "Duplicate value found in the array." << endl;
+    } else {
+        cout << "No duplicate value found (All elements are unique)." << endl;
+    }
+
+    return 0;
 }

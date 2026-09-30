@@ -1,32 +1,23 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-int main()
-{
-    int n, sum = 0, rem;
-    cout << "Enter a Number: ";
+
+// Problem: Calculate the sum of all digits of a given integer
+int main() {
+    int n;
+    cout << "Enter a number: ";
     cin >> n;
-    while (n != 0)
-    {
-        rem = n % 10;
-        n = n / 10;
-        sum = sum ;
-         for (int i = 1; i <= n; i++)
-    {
-        if (n % 1 == 0)
-            sum++;
-        
-        if (sum > 2)
-        
-            cout << "composite";
-        
-        else
-        
-            cout << "Not composite" ;
-        }
-        return 0;
-    
-  {  cout << sum << endl;
-    return 0;1;
-}
-}
+
+    int originalNumber = n;
+    int sum = 0;
+    int temp = abs(n); // Handle negative inputs safely
+
+    while (temp > 0) {
+        int lastDigit = temp % 10; // Extract the last digit
+        sum += lastDigit;          // Add to running sum
+        temp /= 10;                // Remove the last digit
+    }
+
+    cout << "Sum of digits of " << originalNumber << " is: " << sum << endl;
+    return 0;
 }

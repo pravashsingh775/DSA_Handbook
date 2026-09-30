@@ -1,16 +1,21 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    int ans=0,rem,n;
-    cout << "Enter a Number: ";
+
+// Problem: Reverse a given integer (e.g. 1234 -> 4321)
+int main() {
+    int n;
+    cout << "Enter a number to reverse: ";
     cin >> n;
-    while(n!=0)
-    {
-        rem=n%10;
-        n=n/10;
-        ans=ans*10+rem;
+
+    int reversedNumber = 0;
+    int temp = n;
+
+    while (temp != 0) {
+        int lastDigit = temp % 10;
+        reversedNumber = (reversedNumber * 10) + lastDigit;
+        temp /= 10;
     }
-    cout << "Reversed Number: " << ans << endl;
+
+    cout << "Reversed Number: " << reversedNumber << endl;
     return 0;
 }
