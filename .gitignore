@@ -1,0 +1,24 @@
+# Compiled Binaries and Executables
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Build and Output Directories
+bin/
+build/
+out/
+dist/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary & Log files
+*.log
+*.tmp
+*.bak
