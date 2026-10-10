@@ -1,16 +1,11 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-// Problem: Calculate total pushups done in a month (31 days) given X pushups per day
 int main() {
-    int X;
-    int daysInMonth = 31;
+	// your code goes here
+int X, Days=31;
+cout <<"Enter Value of X :" ;
+cin>> X;
+cout << X* Days;
 
-    cout << "Enter number of pushups done per day: ";
-    cin >> X;
-
-    int totalPushups = X * daysInMonth;
-    cout << "Total pushups in a month: " << totalPushups << endl;
-
-    return 0;
 }
