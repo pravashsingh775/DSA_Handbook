@@ -5,15 +5,17 @@ int main()
     int num;
     cout << "Enter a number: ";
     cin >> num;
-    while (num < 0){
-    int sum = 0;
-    int remainder;   
-    
+    // Iterative reduction until a single digit is achieved (LeetCode 258)
+    while (num >= 10)
     {
-        remainder = num % 10;
-        num = num / 10;
-        sum = sum + remainder;
+        int sum = 0;
+        while (num > 0)
+        {
+            sum += num % 10;
+            num /= 10;
+        }
+        num = sum;
     }
-    cout << sum << endl;
-}
+    cout << "Single digit sum: " << num << endl;
+    return 0;
 }

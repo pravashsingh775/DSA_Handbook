@@ -510,3 +510,4 @@ for (int j = i - 1; j >= 1; j--) cout << j << " ";
 | **Nim Game** | `return n % 4 != 0;` | $O(1)$ | $O(1)$ |
 | **Bishop Moves** | $\sum \min(\text{dist to vertical border}, \text{dist to horizontal border})$ | $O(1)$ | $O(1)$ |
 | **Case Flip** | `ch ^ 32` | $O(1)$ | $O(1)$ |
+

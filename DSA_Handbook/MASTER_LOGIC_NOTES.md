@@ -10,7 +10,7 @@
 | Module # | Module Title | Status | Master Notes Document |
 | :---: | :--- | :---: | :--- |
 | **02** | **C++ Fundamentals** | ✅ **Completed** | [📖 Module 02 Logic Notes](./02_C++_Fundamentals/MODULE_02_LOGIC_NOTES.md) |
-| **03** | **Arrays** | ⏳ *Next Up* | *Coming soon upon module completion* |
+| **03** | **Arrays** | 🔄 **In Progress** | [📖 Module 03 Logic Notes](./03_Arrays/MODULE_03_LOGIC_NOTES.md) |
 | **04** | **Strings** | ⏳ *Pending* | *Coming soon* |
 | **05** | **Pointers** | ⏳ *Pending* | *Coming soon* |
 | **06** | **Recursion** | ⏳ *Pending* | *Coming soon* |
@@ -45,3 +45,4 @@ Check the full deep-dive document here: **[Module 02 Logic Notes](./02_C++_Funda
 8. **GCD & LCM:** Euclidean Algorithm $\gcd(a, b) = \gcd(b, a \pmod b)$
 9. **Nim Game (LC 292):** Game theory modular congruence `n % 4 != 0`
 10. **Bitwise Case Conversion:** ASCII Bit 5 flipping `ch ^ 32`
+
